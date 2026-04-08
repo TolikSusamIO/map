@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+.map {
+    width: 70%;
+    height: 70%;
+}
+
+.map_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.map_elements {
+    margin-left: 12px;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    list-style-type: none;
+}
+
+
+.place {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.place:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.place::before,
+.place::after {
+    content: "";
+    position: absolute;
+    margin-top: 22px;
+    margin-left: -10px;
+    width: 65px;
+    height: 1.5px; /* Толщина линий */
+    background-color: black; /* Цвет креста */
+}
+
+.place::before {
+    transform: rotate(45deg);
+}
+
+.place::after {
+    transform: rotate(-45deg);
+}
+
+
+.group_1 {
+    position: absolute;
+    top: 32.5%;
+    left: 40.5%;
+}
+
+.group_2 {
+    position: absolute;
+    left: 52.3%;
+    top: 62%;
+    transform: rotate(-55deg);
+}
+
+.group_3 {
+    position: absolute;
+    left: 28.5%;
+    display: flex;
+    gap: 11px;
+    top: 76.5%;
+    transform: rotate(97deg);
+}
+
+.group_4 {
+    position: absolute;
+    left: 40.5%;
+    display: flex;
+    gap: 11px;
+    top: 82%;
+    transform: rotate(-33.5deg);
+}
+
+.group_5 {
+    position: absolute;
+    left: 78.5%;
+    top: 60.5%;
+    display: flex;
+    transform: rotate(-33deg);
+}
+
+
+.tooltip-box {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
+  z-index: 2;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.tooltip_title {
+    font-weight: bold;
+}
+
+.occupied {
+    background-color: #afb0af;
+}
+
+.occupied:hover {
+    background-color: #979897;
+}
+
+.reserve {
+    background-color: #12b466;
+}
+
+.reserve:hover {
+    background-color: #11a35c;
+}
